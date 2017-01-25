@@ -1,0 +1,42 @@
+/* Declare your font */
+@font-face{ 
+	font-family: 'myFaveFont'; /* This name will be used to assign the font in the the font-family attribute  */
+	/* Added 'fonts/' because the fonts are inside the fonts folder  */
+	src: url('fonts/proclamate_heavy-webfont.eot');
+	src: url('fonts/proclamate_heavy-webfont.eot?iefix') format('eot'),
+	     url('fonts/proclamate_heavy-webfont.woff') format('woff'),
+	     url('fonts/proclamate_heavy-webfont.ttf') format('truetype'),
+	     url('fonts/proclamate_heavy-webfont.svg#webfont') format('svg');
+}
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+ 	margin: 0;
+ 	font-family: "myFaveFont", times, serif; /* Custom font */
+ 	font-size: 100px;
+}
+
+/* Clear Float */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
